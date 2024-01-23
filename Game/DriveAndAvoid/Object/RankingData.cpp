@@ -71,7 +71,7 @@ int RankingData::GetScore(int value)const
 }
 
 //ƒ‰ƒ“ƒNæ“¾ˆ—
-int RankingData::GetRanki(int value)const
+int RankingData::GetRank(int value)const
 {
 	return rank[value];
 }

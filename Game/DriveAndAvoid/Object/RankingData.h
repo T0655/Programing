@@ -19,7 +19,7 @@ public:
 	//スコア取得処理
 	int GetScore(int value)const;
 	//ランク取得処理
-	int GetRanki(int value)const;
+	int GetRank(int value)const;
 	//名前取得処理
 	const char* GetName(int value)const;
 private:
