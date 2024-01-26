@@ -61,7 +61,7 @@ eSceneType GameMainScene::Update()
 	//プレイヤーの更新
 	player->Update();
 
-	//移動郷里の更新
+	//移動距離の更新
 	mileage += (int)player->GetSpeed() + 5;
 
 	//敵生成処理
