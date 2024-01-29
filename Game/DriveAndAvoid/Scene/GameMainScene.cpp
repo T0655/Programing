@@ -44,7 +44,7 @@ void GameMainScene::Initialize()
 
 	//オブジェクトの生成
 	player = new Player;
-	enemy = new Enemy * [10];
+	enemy = new Enemy* [10];
 
 	//オブジェクト初期化
 	player->Initialize();
@@ -100,6 +100,7 @@ eSceneType GameMainScene::Update()
 			{
 				player->SetActive(false);
 				player->DecreaseHp(-50.0f);
+				enemy[i]->Finalize();
 				delete enemy[i];
 				enemy[i] = nullptr;
 			}
@@ -160,6 +161,13 @@ void GameMainScene::Draw()const
 	float fy = 390.0f;
 	DrawFormatString(fx, fy, GetColor(0, 0, 0), "FUEL METER");
 	DrawBoxAA(fx, fy + 20.0f, fx + (player->GetFuel() * 100 / 20000), fy + 40.0f, GetColor(0, 102, 204), TRUE);
+	DrawBoxAA(fx, fy + 20.0f, fx + 100.0f, fy + 40.0f, GetColor(0, 0, 0), FALSE);
+
+	//体力ゲージの描画
+	fx = 510.0f;
+	fy = 430.0f;
+	DrawFormatStringF(fx, fy, GetColor(0, 0, 0), "PLAYER HP");
+	DrawBoxAA(fx, fy + 20.0f, fx + (player->GetHp() * 100 / 1000), fy + 40.0f, GetColor(255, 0, 0), TRUE);
 	DrawBoxAA(fx, fy + 20.0f, fx + 100.0f, fy + 40.0f, GetColor(0, 0, 0), FALSE);
 }
 

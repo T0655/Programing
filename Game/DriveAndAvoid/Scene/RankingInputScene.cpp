@@ -39,7 +39,7 @@ void RankingInputScene::Initialize()
 	}
 
 	//結果を読み込む
-	fscanf_s(fp, "%6d.\n", &score);
+	fscanf_s(fp, "%6d,\n", &score);
 
 	//ファイルクローズ
 	fclose(fp);

@@ -37,7 +37,7 @@ void Player::Initialize()
 //更新処理
 void Player::Update()
 {
-	//操作負荷状態であれば、自信を回転させる
+	//操作不可状態であれば、自信を回転させる
 	if (!is_active)
 	{
 		angle += DX_PI_F / 24.0f;
