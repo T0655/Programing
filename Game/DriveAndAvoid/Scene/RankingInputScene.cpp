@@ -2,7 +2,7 @@
 #include"../Utility/InputControl.h"
 #include"DxLib.h"
 
-RankingInputScene::RankingInputScene() :background_image(NULL), ranking(nullptr), score(0), name_num(0), cursor_x(0), cursor_y(0)
+RankingInputScene::RankingInputScene() : background_image(NULL), ranking(nullptr), score(0), name_num(0), cursor_x(0), cursor_y(0)
 {
 	memset(name, NULL, (sizeof(char) * 15));
 }
@@ -93,7 +93,7 @@ void RankingInputScene::Draw()const
 	{
 		int x = cursor_x * font_size + 10;
 		int y = cursor_y * font_size + 295;
-		DrawBox(x, y, x + font_size, y + font_size, GetColor(55, 255, 255), FALSE);
+		DrawBox(x, y, x + font_size, y + font_size, GetColor(255, 255, 255), FALSE);
 	}
 	else
 	{
