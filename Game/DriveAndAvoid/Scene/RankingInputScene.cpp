@@ -80,7 +80,7 @@ void RankingInputScene::Draw()const
 	for (int i = 0; i < 26; i++)
 	{
 		int x = (i % 13) * font_size + 15;
-		int y = (1 / 13) * font_size + 300;
+		int y = (i / 13) * font_size + 300;
 		DrawFormatString(x, y, GetColor(255, 255, 255), "%-3c", 'a' + i);
 		y = ((i / 13) + 2) * font_size + 300;
 		DrawFormatString(x, y, GetColor(255, 255, 255), "%-3c", 'A' + i);

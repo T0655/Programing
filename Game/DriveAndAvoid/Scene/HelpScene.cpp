@@ -2,7 +2,7 @@
 #include"../Utility//InputControl.h"
 #include"DxLib.h"
 
-HelpScene::HelpScene() :background_image(NULL)
+HelpScene::HelpScene() : background_image(NULL)
 {
 
 }

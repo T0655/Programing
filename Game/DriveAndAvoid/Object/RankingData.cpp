@@ -22,7 +22,7 @@ RankingData::~RankingData()
 //初期化処理
 void RankingData::Initialize()
 {
-	//ラインキングデータの読み込み
+	//ランキングデータの読み込み
 	FILE* fp = nullptr;
 
 	//ファイルオープン
