@@ -16,7 +16,7 @@ RankingDispScene::~RankingDispScene()
 void RankingDispScene::Initialize()
 {
 	//画像の読み込み
-	background_image = LoadGraph("Resource/image/Ranking.bmp");
+	background_image = LoadGraph("Resource/images/Ranking.bmp");
 
 	//エラーチェック
 	if (background_image == -1)
@@ -42,7 +42,7 @@ eSceneType RankingDispScene::Update()
 }
 
 //描画処理
-void RankingDispScene::Draw()const
+void RankingDispScene::Draw() const
 {
 	//背景画像の描画
 	DrawGraph(0, 0, background_image, FALSE);
@@ -66,7 +66,7 @@ void RankingDispScene::Finalize()
 }
 
 //現在のシーン情報を取得
-eSceneType RankingDispScene::GetNowScene()const
+eSceneType RankingDispScene::GetNowScene() const
 {
 	return eSceneType::E_RANKING_DISP;
 }

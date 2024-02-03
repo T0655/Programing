@@ -30,7 +30,7 @@ void RankingInputScene::Initialize()
 	//リザルトデータを取得する
 	FILE* fp = nullptr;
 	//ファイルオープン
-	errno_t result = fopen_s(&fp, "Resource/dat/result_data.csv", "r");
+	errno_t result = fopen_s(&fp, "Resource/dat/result_data.csv","r");
 
 	//エラーチェック
 	if (result != 0)
@@ -122,7 +122,7 @@ void RankingInputScene::Finalize()
 }
 
 //現在のシーン情報を取得
-eSceneType RankingInputScene::GetNowScene()const
+eSceneType RankingInputScene::GetNowScene() const
 {
 	return eSceneType::E_RANKING_INPUT;
 }
