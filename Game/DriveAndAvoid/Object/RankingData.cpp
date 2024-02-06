@@ -96,7 +96,7 @@ void RankingData::SortData()
 				score[i] = score[j];
 				score[j] = tmp;
 
-				char buf[15] = { };
+				char buf[15] = {};
 				strcpy_s(buf, name[i]);
 				strcpy_s(name[i],name[j]);
 				strcpy_s(name[j],buf);
