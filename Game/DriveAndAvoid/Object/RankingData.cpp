@@ -37,7 +37,7 @@ void RankingData::Initialize()
 	//対象ファイルから読み込む
 	for (int i = 0; i < 5; i++)
 	{
-		fscanf_s(fp, "%6d,%2d,%[^,],\n", &score[i], &rank[i], name[i], 15);
+		fscanf_s(fp, "%d,%d,%[^,],\n", &score[i], &rank[i], name[i], 15);
 	}
 
 	//ファイルクローズ
@@ -124,7 +124,7 @@ void RankingData::SortData()
 	FILE* fp = nullptr;
 
 	//ファイルオープン
-	errno_t result = fopen_s(&fp, "Resouce/dat/ranking_data.csv", "w");
+	errno_t result = fopen_s(&fp, "Resource/dat/ranking_data.csv", "w");
 
 	//エラーチェック
 	if (result != 0)
